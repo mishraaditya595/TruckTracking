@@ -36,8 +36,14 @@ class LoginFragment : Fragment() {
                 flag = 'A'
 
             when(flag) {
-                'D' -> Navigation.findNavController(view).navigate(R.id.action_loginFragment_to_driverFragment)
-                'U' -> Navigation.findNavController(view).navigate(R.id.action_loginFragment_to_userDashboardFragment)
+                'D' -> {
+                    val actions = LoginFragmentDirections.actionLoginFragmentToProfileFragment("D")
+                    Navigation.findNavController(view).navigate(actions)
+                }
+                'U' -> {
+                    val actions = LoginFragmentDirections.actionLoginFragmentToProfileFragment("U")
+                    Navigation.findNavController(view).navigate(actions)
+                }
                 'A' -> Snackbar.make(view,"Admin access",Snackbar.LENGTH_SHORT).show()
                 else -> Toast.makeText(requireContext(),"Invalid user name",Toast.LENGTH_SHORT).show()
             }

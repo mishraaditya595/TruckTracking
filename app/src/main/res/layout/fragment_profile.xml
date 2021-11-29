@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.ProfileFragment">
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello User"
+        style="@style/TextAppearance.AppCompat.Display1"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="22dp"
+        />
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv1"
+        android:text="Welcome to Truck Tracking Service"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="7dp"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/statement_cv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv2"
+        android:layout_marginTop="22dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
+        app:cardCornerRadius="17dp"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            >
+
+            <ImageView
+                android:id="@+id/statement_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_statement"
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="19dp" />
+
+            <TextView
+                android:id="@+id/statement_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Statement"
+                style="@style/TextAppearance.AppCompat.Large"
+                android:layout_toRightOf="@id/statement_iv"
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginBottom="17dp"
+                />
+
+
+
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/certificates_cv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/statement_cv"
+        android:layout_marginTop="22dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
+        app:cardCornerRadius="17dp"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            >
+
+            <ImageView
+                android:id="@+id/certificate_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_certificates"
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="19dp" />
+
+            <TextView
+                android:id="@+id/certificate_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Certificates"
+                style="@style/TextAppearance.AppCompat.Large"
+                android:layout_toRightOf="@id/certificate_iv"
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginBottom="17dp"
+                />
+
+
+
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/add_truck_cv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/certificates_cv"
+        android:layout_marginTop="22dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
+        app:cardCornerRadius="17dp"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            >
+
+            <ImageView
+                android:id="@+id/add_truck_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_truck"
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="19dp" />
+
+            <TextView
+                android:id="@+id/add_truck_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add/Update truck details"
+                style="@style/TextAppearance.AppCompat.Large"
+                android:layout_toRightOf="@id/add_truck_iv"
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginBottom="17dp"
+                />
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/see_truck_cv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/add_truck_cv"
+        android:layout_marginTop="22dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
+        app:cardCornerRadius="17dp"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            >
+
+            <ImageView
+                android:id="@+id/see_truck_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_check"
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="19dp" />
+
+            <TextView
+                android:id="@+id/see_truck_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Check truck details"
+                style="@style/TextAppearance.AppCompat.Large"
+                android:layout_toRightOf="@id/see_truck_iv"
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginBottom="17dp"
+                />
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/help_c"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/see_truck_cv"
+        android:layout_marginTop="22dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
+        app:cardCornerRadius="17dp"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            >
+
+            <ImageView
+                android:id="@+id/help_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_help"
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="19dp" />
+
+            <TextView
+                android:id="@+id/help_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Help and Support"
+                style="@style/TextAppearance.AppCompat.Large"
+                android:layout_toRightOf="@id/help_iv"
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginBottom="17dp"
+                />
+
+
+
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+</RelativeLayout>

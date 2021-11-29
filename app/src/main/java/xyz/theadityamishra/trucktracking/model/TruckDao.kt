@@ -14,4 +14,7 @@ interface TruckDao {
 
     @Delete
     fun deleteData(truckData: TruckModel)
+
+    @Query("SELECT * FROM truck WHERE id LIKE '%' || :id || '%'")
+    fun filterData(id: String): List<TruckModel>
 }

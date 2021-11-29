@@ -8,4 +8,5 @@ class TruckRepository(private val truckDao: TruckDao) {
 
     fun deleteData(data: TruckModel) = truckDao.deleteData(data)
 
+    fun filterData(id: String) = truckDao.filterData(id)
 }

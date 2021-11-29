@@ -16,6 +16,7 @@ public class TruckInfoViewModel(context: Context): ViewModel() {
 
     private val repo: TruckRepository
     val trucks = MediatorLiveData<List<TruckModel>>()
+    val filteredData = MediatorLiveData<List<TruckModel>>()
 
     init {
         val truckDao = TruckDB.getDatabase(context).truckDao()
@@ -37,5 +38,7 @@ public class TruckInfoViewModel(context: Context): ViewModel() {
             repo.deleteData(data)
         }
     }
+
+    fun filterData(id: String) = repo.filterData(id)
 
 }

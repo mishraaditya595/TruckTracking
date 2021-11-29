@@ -2,10 +2,12 @@ package xyz.theadityamishra.trucktracking.ui
 
 import android.os.Binder
 import android.os.Bundle
+import android.text.TextWatcher
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.widget.addTextChangedListener
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
@@ -18,6 +20,9 @@ import xyz.theadityamishra.trucktracking.repository.Repositoy
 import xyz.theadityamishra.trucktracking.ui.adapters.TruckAdapter
 import xyz.theadityamishra.trucktracking.viewModel.TruckInfoViewModel
 import xyz.theadityamishra.trucktracking.viewModel.TruckInfoViewModelFactory
+import android.text.Editable
+import java.util.Locale.filter
+
 
 @InternalCoroutinesApi
 class UserDashboardFragment : Fragment() {
@@ -41,9 +46,17 @@ class UserDashboardFragment : Fragment() {
 
         setupRecyclerView()
 
-        viewModel.trucks.observe(viewLifecycleOwner, Observer {
-            truckAdapter.submitList(it)
-        })
+        if (binding.trucknumEt.text.isNullOrEmpty() || binding.trucknumEt.text.isNullOrBlank()) {
+            viewModel.trucks.observe(viewLifecycleOwner, Observer {
+                truckAdapter.submitList(it)
+            })
+        } else {
+            binding.searchTrucksBtn.setOnClickListener {
+                val filteredList = viewModel.filterData(binding.trucknumEt.text.toString())
+                truckAdapter.submitList(filteredList)
+            }
+
+        }
     }
 
     private fun setupRecyclerView() {
