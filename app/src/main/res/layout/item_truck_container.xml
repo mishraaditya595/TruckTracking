@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_truck_item"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginStart="5dp"
+    android:layout_marginTop="5dp"
+    app:cardCornerRadius="18dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="3dp">
+
+        <TextView
+            android:id="@+id/truck_num_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="OD 07 3281"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/current_location_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/truck_num_tv"
+            android:text="Sambalpur"
+            android:layout_marginTop="5dp"
+            style="@style/TextAppearance.AppCompat.Small"
+            />
+
+        <TextView
+            android:id="@+id/from_to_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/current_location_tv"
+            android:text="Kolkata -> Bhubaneswar"
+            android:layout_marginTop="5dp"
+            />
+
+        <TextView
+            android:id="@+id/cargo_type_load_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/from_to_tv"
+            android:text="Wood (3000 kg)"
+            android:layout_marginTop="5dp"
+            />
+
+        <TextView
+            android:id="@+id/model_cond_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cargo_type_load_tv"
+            android:text="Ashok Leyland (OK)"
+            android:layout_marginTop="5dp"
+            />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

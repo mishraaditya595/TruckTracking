@@ -5,7 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.navigation.Navigation
+import com.google.android.material.snackbar.Snackbar
 import xyz.theadityamishra.trucktracking.R
 import xyz.theadityamishra.trucktracking.databinding.FragmentLoginBinding
 
@@ -22,12 +24,24 @@ class LoginFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentLoginBinding.bind(view)
 
-        var flag: Boolean = false
-        if (binding.passwordEt.text?.contains("driver") == true)
-            flag = true
+
 
         binding.buttonCard.setOnClickListener {
-            Navigation.findNavController(view).navigate(R.id.action_loginFragment_to_driverFragment)
+            var flag: Char = 'Z'
+            if (binding.usernameEt.text?.toString()?.equals("driver") == true)
+                flag = 'D'
+            else if (binding.usernameEt.text?.toString()?.equals("user") == true)
+                flag = 'U'
+            else if (binding.usernameEt.text?.toString()?.equals("admin") == true)
+                flag = 'A'
+
+            when(flag) {
+                'D' -> Navigation.findNavController(view).navigate(R.id.action_loginFragment_to_driverFragment)
+                'U' -> Navigation.findNavController(view).navigate(R.id.action_loginFragment_to_userDashboardFragment)
+                'A' -> Snackbar.make(view,"Admin access",Snackbar.LENGTH_SHORT).show()
+                else -> Toast.makeText(requireContext(),"Invalid user name",Toast.LENGTH_SHORT).show()
+            }
+
         }
     }
 

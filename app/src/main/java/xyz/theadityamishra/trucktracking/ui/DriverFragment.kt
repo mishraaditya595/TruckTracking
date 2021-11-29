@@ -36,16 +36,13 @@ class DriverFragment : Fragment() {
         val viewModelFactory = TruckInfoViewModelFactory(requireContext(), repository)
         viewModel = ViewModelProvider(this, viewModelFactory)[TruckInfoViewModel::class.java]
 
-        Toast.makeText(requireContext(),"GGGG", Toast.LENGTH_SHORT).show()
-
-
 
         binding.submitBtn.setOnClickListener {
             val truckModel = TruckModel(
-                "binding.truckNumTextinputlayout.editText?.text.toString()",
+                binding.trucknumEt.text.toString(),
                 binding.startEt.text.toString(),
                 binding.endEt.text.toString(),
-                13.4F,
+                binding.timeEt.text.toString().toFloat(),
                 binding.locationEt.text.toString(),
                 binding.statusEt.text.toString(),
                 binding.cargoEt.text.toString(),
