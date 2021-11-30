@@ -1,4 +1,4 @@
-package xyz.theadityamishra.trucktracking.model
+package xyz.theadityamishra.trucktracking.model.TruckDB
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import xyz.theadityamishra.trucktracking.databinding.ItemTruckContainerBinding
-import xyz.theadityamishra.trucktracking.model.TruckModel
+import xyz.theadityamishra.trucktracking.model.TruckDB.TruckModel
 
 class TruckAdapter(): RecyclerView.Adapter<TruckAdapter.TruckViewHolder>() {
 

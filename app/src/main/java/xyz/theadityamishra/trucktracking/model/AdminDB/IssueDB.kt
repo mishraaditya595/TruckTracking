@@ -1,4 +1,4 @@
-package xyz.theadityamishra.trucktracking.model
+package xyz.theadityamishra.trucktracking.model.AdminDB
 
 import android.content.Context
 import androidx.room.Database
@@ -6,29 +6,29 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import kotlinx.coroutines.InternalCoroutinesApi
 
-@Database(entities = [TruckModel::class], version = 1, exportSchema = true)
-abstract class TruckDB: RoomDatabase() {
+@Database(entities = [IssueModel::class], version = 1, exportSchema = true)
+abstract class IssueDB: RoomDatabase() {
 
-    abstract fun truckDao(): TruckDao
+    abstract fun issueDao(): IssueDao
 
     companion object {
         @Volatile
-        var truckDatabase: TruckDB? = null
+        var issueDatabase: IssueDB? = null
 
         @InternalCoroutinesApi
-        fun getDatabase(context: Context): TruckDB {
-            val tempInstance = truckDatabase
+        fun getDatabase(context: Context): IssueDB {
+            val tempInstance = issueDatabase
             if (tempInstance != null)
                 return tempInstance
 
             synchronized(this) {
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
-                    TruckDB::class.java,
-                    "truck")
+                    IssueDB::class.java,
+                    "issue")
                     .build()
 
-                truckDatabase = instance
+                issueDatabase = instance
                 return instance
             }
         }

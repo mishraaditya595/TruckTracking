@@ -1,4 +1,4 @@
-package xyz.theadityamishra.trucktracking.viewModel
+package xyz.theadityamishra.trucktracking.viewModel.TruckInfoViewModel
 
 import android.content.Context
 import androidx.lifecycle.ViewModel

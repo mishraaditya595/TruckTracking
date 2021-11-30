@@ -1,4 +1,4 @@
-package xyz.theadityamishra.trucktracking.viewModel
+package xyz.theadityamishra.trucktracking.viewModel.TruckInfoViewModel
 
 import android.content.Context
 import androidx.lifecycle.MediatorLiveData
@@ -7,9 +7,9 @@ import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.InternalCoroutinesApi
 import kotlinx.coroutines.launch
-import xyz.theadityamishra.trucktracking.model.TruckDB
-import xyz.theadityamishra.trucktracking.model.TruckModel
-import xyz.theadityamishra.trucktracking.model.TruckRepository
+import xyz.theadityamishra.trucktracking.model.TruckDB.TruckDB
+import xyz.theadityamishra.trucktracking.model.TruckDB.TruckModel
+import xyz.theadityamishra.trucktracking.model.TruckDB.TruckRepository
 
 @InternalCoroutinesApi
 public class TruckInfoViewModel(context: Context): ViewModel() {

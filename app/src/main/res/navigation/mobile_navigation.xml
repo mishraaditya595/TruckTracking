@@ -11,18 +11,15 @@
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
-            android:id="@+id/action_loginFragment_to_driverFragment"
-            app:destination="@id/driverFragment" />
-        <action
-            android:id="@+id/action_loginFragment_to_userDashboardFragment"
-            app:destination="@id/dashboardFragment" />
-        <action
             android:id="@+id/action_loginFragment_to_profileFragment"
             app:destination="@id/profileFragment" />
         <argument
             android:name="UserType"
             app:argType="string"
             android:defaultValue="Z" />
+        <action
+            android:id="@+id/action_loginFragment_to_adminFragment"
+            app:destination="@id/adminFragment" />
     </fragment>
     <fragment
         android:id="@+id/dashboardFragment"
@@ -48,5 +45,33 @@
         <argument
             android:name="userType"
             app:argType="string" />
+        <action
+            android:id="@+id/action_profileFragment_to_newIssueFragment"
+            app:destination="@id/newIssueFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/newIssueFragment"
+        android:name="xyz.theadityamishra.trucktracking.ui.NewIssueFragment"
+        android:label="fragment_new_issue"
+        tools:layout="@layout/fragment_new_issue" />
+    <fragment
+        android:id="@+id/adminFragment"
+        android:name="xyz.theadityamishra.trucktracking.ui.AdminFragment"
+        android:label="fragment_admin"
+        tools:layout="@layout/fragment_admin" >
+        <action
+            android:id="@+id/action_adminFragment_to_driverFragment"
+            app:destination="@id/driverFragment" />
+        <action
+            android:id="@+id/action_adminFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+        <action
+            android:id="@+id/action_adminFragment_to_showIssuesFragment"
+            app:destination="@id/showIssuesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/showIssuesFragment"
+        android:name="xyz.theadityamishra.trucktracking.ui.ShowIssuesFragment"
+        android:label="fragment_show_issues"
+        tools:layout="@layout/fragment_show_issues" />
 </navigation>

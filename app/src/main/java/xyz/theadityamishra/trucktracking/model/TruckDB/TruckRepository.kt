@@ -1,4 +1,4 @@
-package xyz.theadityamishra.trucktracking.model
+package xyz.theadityamishra.trucktracking.model.TruckDB
 
 class TruckRepository(private val truckDao: TruckDao) {
 

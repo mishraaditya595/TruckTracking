@@ -43,5 +43,14 @@ class ProfileFragment : Fragment() {
                 Toast.makeText(requireContext(),"You are not allowed to open it", Toast.LENGTH_SHORT).show()
         }
 
+        binding.helpC.setOnClickListener {
+            if (arg.equals("U") or arg.equals("D"))
+                Navigation.findNavController(view).navigate(R.id.action_profileFragment_to_newIssueFragment)
+            else
+                Toast.makeText(requireContext(),"You are not allowed to open it", Toast.LENGTH_SHORT).show()
+        }
+
+
+
     }
 }

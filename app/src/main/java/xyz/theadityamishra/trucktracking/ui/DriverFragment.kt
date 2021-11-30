@@ -1,21 +1,19 @@
 package xyz.theadityamishra.trucktracking.ui
 
-import android.os.Binder
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.InternalCoroutinesApi
 import xyz.theadityamishra.trucktracking.R
 import xyz.theadityamishra.trucktracking.databinding.FragmentDriverBinding
-import xyz.theadityamishra.trucktracking.model.TruckModel
+import xyz.theadityamishra.trucktracking.model.TruckDB.TruckModel
 import xyz.theadityamishra.trucktracking.repository.Repositoy
-import xyz.theadityamishra.trucktracking.viewModel.TruckInfoViewModel
-import xyz.theadityamishra.trucktracking.viewModel.TruckInfoViewModelFactory
+import xyz.theadityamishra.trucktracking.viewModel.TruckInfoViewModel.TruckInfoViewModel
+import xyz.theadityamishra.trucktracking.viewModel.TruckInfoViewModel.TruckInfoViewModelFactory
 
 @InternalCoroutinesApi
 class DriverFragment : Fragment() {
